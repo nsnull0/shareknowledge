@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14835.7" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14790.5"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="TestDataSource" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v53-bB-PbN">
+                                <rect key="frame" x="0.0" y="44" width="414" height="768"/>
+                                <color key="backgroundColor" xcode11CocoaTouchSystemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                            </tableView>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nXx-ex-OA4">
+                                <rect key="frame" x="157" y="820" width="100" height="34"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="100" id="8kY-F7-WIu"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="FVG-NO-W3t" userLabel="left button">
+                                <rect key="frame" x="12" y="822" width="85" height="30"/>
+                                <state key="normal" title="Left Bubble"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="n0y-Mo-SJo" userLabel="right button">
+                                <rect key="frame" x="314" y="822" width="88" height="30"/>
+                                <state key="normal" title="Right Bubble"/>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="n0y-Mo-SJo" firstAttribute="leading" relation="lessThanOrEqual" secondItem="nXx-ex-OA4" secondAttribute="trailing" constant="60" id="9ln-TF-iGo"/>
+                            <constraint firstItem="nXx-ex-OA4" firstAttribute="centerX" secondItem="6Tk-OE-BBY" secondAttribute="centerX" id="Gxs-zt-He3"/>
+                            <constraint firstItem="FVG-NO-W3t" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="12" id="KVB-tK-fzH"/>
+                            <constraint firstAttribute="trailing" secondItem="n0y-Mo-SJo" secondAttribute="trailing" constant="12" id="Lqy-Bz-7SD"/>
+                            <constraint firstItem="v53-bB-PbN" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="Vu2-dN-lI7"/>
+                            <constraint firstItem="nXx-ex-OA4" firstAttribute="top" secondItem="v53-bB-PbN" secondAttribute="bottom" constant="8" id="bRG-QD-Uo7"/>
+                            <constraint firstItem="v53-bB-PbN" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eI6-Ne-uIC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="v53-bB-PbN" secondAttribute="trailing" id="fzI-Pk-xNn"/>
+                            <constraint firstItem="nXx-ex-OA4" firstAttribute="leading" relation="lessThanOrEqual" secondItem="FVG-NO-W3t" secondAttribute="trailing" constant="60" id="gD3-6T-N2f"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="v53-bB-PbN" secondAttribute="bottom" constant="50" id="nhF-i1-dRJ"/>
+                            <constraint firstItem="FVG-NO-W3t" firstAttribute="centerY" secondItem="nXx-ex-OA4" secondAttribute="centerY" id="rTU-MR-XNU"/>
+                            <constraint firstItem="n0y-Mo-SJo" firstAttribute="centerY" secondItem="nXx-ex-OA4" secondAttribute="centerY" id="vt4-kJ-AMD"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="bottomConstraint" destination="nhF-i1-dRJ" id="kjO-jc-fr4"/>
+                        <outlet property="inputField" destination="nXx-ex-OA4" id="lnZ-uX-LxM"/>
+                        <outlet property="leftPostButtonBubble" destination="FVG-NO-W3t" id="SOb-fG-SB2"/>
+                        <outlet property="rightPostButtonBubble" destination="n0y-Mo-SJo" id="Bzq-aY-6de"/>
+                        <outlet property="tableView" destination="v53-bB-PbN" id="OUc-vf-sMd"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="137.94642857142856"/>
+        </scene>
+    </scenes>
+</document>
